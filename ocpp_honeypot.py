@@ -20,8 +20,8 @@ async def handler(websocket, path):
         log_event(f"Error with {attacker_ip}: {e}")
 
 async def main():
-    log_event("Fake EV Charger Honeypot listening on port 9000...")
-    async with websockets.serve(handler, "0.0.0.0", 9000):
+    log_event("Fake EV Charger Honeypot listening on port 8080...")
+    async with websockets.serve(handler, "0.0.0.0", 8080):
         await asyncio.Future()
 
 if __name__ == "__main__":
